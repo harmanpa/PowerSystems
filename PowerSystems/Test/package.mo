@@ -5,8 +5,6 @@ package Test
   package SimpleComponentsTest
   "See: Oeding, Oswald: Elektrische Kraftwerke und Netze, section 14: Leistungsfluss im Drehstromnetz."
     model ImpedanceTest
-    import PowerSystems;
-
       PowerSystems.Generic.FixedVoltageSource
                                  source
         annotation (Placement(transformation(extent={{-80,0},{-60,20}},
@@ -29,8 +27,6 @@ package Test
     end ImpedanceTest;
 
     model AdmittanceTest
-    import PowerSystems;
-
       PowerSystems.Generic.FixedVoltageSource
                                  source
         annotation (Placement(transformation(extent={{-80,0},{-60,20}},
@@ -52,8 +48,6 @@ package Test
     end AdmittanceTest;
 
     model InductiveLoadTest
-    import PowerSystems;
-
       PowerSystems.Generic.FixedVoltageSource
                                  source
         annotation (Placement(transformation(extent={{-80,0},{-60,20}},
@@ -82,8 +76,6 @@ package Test
     end InductiveLoadTest;
 
     model FixedCurrentTest
-    import PowerSystems;
-
       PowerSystems.Generic.FixedVoltageSource source
         annotation (Placement(transformation(extent={{-80,0},{-60,20}},
                                              rotation=0)));
@@ -104,8 +96,6 @@ package Test
     end FixedCurrentTest;
 
     model FixedLoadTest
-    import PowerSystems;
-
       PowerSystems.Generic.FixedVoltageSource
                                  source
         annotation (Placement(transformation(extent={{-80,0},{-60,20}},
@@ -128,8 +118,6 @@ package Test
     end FixedLoadTest;
 
     model EMFTest
-    import PowerSystems;
-
       PowerSystems.Generic.EMF
         eMF
         annotation (Placement(transformation(extent={{-20,0},{0,20}}, rotation=0)));
@@ -157,8 +145,6 @@ package Test
     end EMFTest;
 
     model EMFTest2
-    import PowerSystems;
-
       PowerSystems.Generic.EMF
         eMF
         annotation (Placement(transformation(extent={{-20,0},{0,20}}, rotation=0)));
