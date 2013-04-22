@@ -131,7 +131,7 @@ The following table summerizes the PhaseSystems that are predefined in the Power
 
 
 
-  constant String TableDir=classDirectory() + "Resources/Tables/"
+  constant String TableDir="modelica://PowerSystems/Resources/Tables/"
   "Directory of example tables";
 
 
