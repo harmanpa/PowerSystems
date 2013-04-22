@@ -692,7 +692,7 @@ block PWMsyn1ph "Sine PWM synchronous mode, 1-phase"
   SI.Angle phi;
   Real u;
   Integer n;
-  Integer sigma;
+  parameter Integer sigma(fixed=false);
   discrete Real sigdel_phi;
   function mod2sign = Basic.Math.mod2sign;
 
@@ -724,7 +724,6 @@ initial algorithm
   end if;
 
 equation
-  sigma = pre(sigma);
   phi = mod(theta + uPhasor[2], 2*pi);
   u = uPhasor[1]*cos(phi);
 
@@ -1070,7 +1069,7 @@ package Partials "Partial models"
       choice=true " true: symmetric",
       choice=false "false: antisymmetric"));
     protected
-    Boolean[8,3] state=
+    constant Boolean[8,3] state=
       [true,false,false;
        true,true,false;
        false,true,false;
@@ -1149,7 +1148,7 @@ protected
     final parameter SI.Angle[m1] dphi=(del_phi/sqrt(3))*sin((1:m1)*del_phi) annotation(Evaluate=true);
     SI.Angle[m2] Phi;
     SI.Angle[m2] Dphi;
-    Integer[6,:] K=if sym then
+    parameter Integer[6,:] K=if sym then
       [1,7,1,2,8,2;
        2,8,2,3,7,3;
        3,7,3,4,8,4;
@@ -1162,7 +1161,7 @@ protected
        4,8,7,5,0,0;
        5,7,8,6,0,0;
        6,8,7,1,0,0];
-    Integer imax = if sym then 6 else 4; // size(K,2);
+    parameter Integer imax = if sym then 6 else 4; // size(K,2);
   equation
     if sym then
       Phi[1] = 0;
