@@ -989,7 +989,6 @@ The following switches/features are provided:
   package Test "Component tests for PowerWorld example"
 
     model PowerPlantTest1 "Test primary control"
-    import PowerSystems;
       Components.PowerPlant powerPlant
         annotation (Placement(transformation(extent={{-20,0},{2,22}}, rotation=0)));
       Modelica.Blocks.Sources.Constant schedule(k=450)
@@ -1040,7 +1039,6 @@ The following switches/features are provided:
     end PowerPlantTest1;
 
     model PowerPlantTest2 "Test secondary control"
-    import PowerSystems;
       Components.PowerPlant powerPlant
         annotation (Placement(transformation(extent={{-20,0},{2,22}}, rotation=0)));
       Modelica.Blocks.Sources.Constant schedule(k=490)
@@ -1092,7 +1090,6 @@ The following switches/features are provided:
     end PowerPlantTest2;
 
     model PowerPlantTest3 "Test connection to a large net"
-    import PowerSystems;
       Components.PowerPlant powerPlant
         annotation (Placement(transformation(extent={{-20,0},{2,22}}, rotation=0)));
       Modelica.Blocks.Sources.Constant schedule(k=490)
@@ -1135,7 +1132,6 @@ The following switches/features are provided:
     end PowerPlantTest3;
 
     model HydroPlantTest1 "Test primary control"
-    import PowerSystems;
       Components.HydroPlant hydroPlant(primaryControlMax=310)
         annotation (Placement(transformation(extent={{-20,0},{0,20}}, rotation=0)));
       Modelica.Blocks.Sources.Constant schedule(k=50)
@@ -1193,7 +1189,6 @@ The following switches/features are provided:
     end HydroPlantTest1;
 
     model HydroPlantTest2 "Test secondary control"
-    import PowerSystems;
       Components.HydroPlant hydroPlant
         annotation (Placement(transformation(extent={{-20,0},{0,20}}, rotation=0)));
       Modelica.Blocks.Sources.Constant schedule(k=50)
@@ -1242,7 +1237,6 @@ The following switches/features are provided:
     end HydroPlantTest2;
 
     model WindFarmLoadTest "WindFarm connected to a load"
-    import PowerSystems;
       Components.WindFarm windFarm
         annotation (Placement(transformation(extent=
                                              {{-60,0},{-40,20}}, rotation=0)));
@@ -1266,7 +1260,6 @@ The following switches/features are provided:
     end WindFarmLoadTest;
 
     model WindFarmNetTest "WindFarm connected to a large net"
-    import PowerSystems;
       Components.WindFarm windFarm
         annotation (Placement(transformation(extent=
                                              {{-60,0},{-40,20}}, rotation=0)));
@@ -1284,7 +1277,6 @@ The following switches/features are provided:
     end WindFarmNetTest;
 
     model WindFarmHVDCTest "WindFarm connected to a large net via HVDC"
-    import PowerSystems;
       Components.WindFarm windFarm(redeclare package PhaseSystem =
             PowerSystems.PhaseSystems.DirectCurrent)
         annotation (Placement(transformation(extent=
@@ -1310,7 +1302,6 @@ The following switches/features are provided:
     end WindFarmHVDCTest;
 
     model CityTest
-    import PowerSystems;
       PowerSystems.Generic.FixedVoltageSource largeNet
         annotation (Placement(transformation(extent={{-60,0},{-40,20}},
                                              rotation=0)));
@@ -1328,7 +1319,6 @@ The following switches/features are provided:
     end CityTest;
 
     model LoadDispatcherTest
-    import PowerSystems;
       Components.LoadDispatcher loadDispatcher
         annotation (Placement(transformation(extent={{-40,0},{-20,20}})));
       Modelica.Blocks.Sources.Trapezoid frequency(amplitude=2,
