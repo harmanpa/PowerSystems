@@ -186,7 +186,7 @@ Compare 'transient' and 'steady-state' mode.</p>
       D=1.5e3,
       slope_perc=2.5,
       tableName="height",
-      fileName=TableDir + "hNormProfile.tab",
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "hNormProfile.tab"),
       colData=3)
       annotation (Placement(transformation(extent={{70,-20},{90,0}}, rotation=0)));
     PowerSystems.Examples.Spot.Data.Machines.Asynchron3kV_1p5MVA asyn3k_1p5M
@@ -278,7 +278,7 @@ Compare 'transient' and 'steady-state' mode.</p>
       D=1.5e3,
       slope_perc=2.5,
       tableName="height",
-      fileName=TableDir + "hNormProfile.tab",
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "hNormProfile.tab"),
       colData=3)
       annotation (Placement(transformation(extent={{40,-40},{60,-20}}, rotation=
              0)));
@@ -398,7 +398,7 @@ Compare 'transient' and 'steady-state' mode.</p>
       D=1.5e3,
       slope_perc=2.5,
       tableName="height",
-      fileName=TableDir + "hNormProfile.tab",
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "hNormProfile.tab"),
       colData=3)
       annotation (Placement(transformation(extent={{70,-20},{90,0}}, rotation=0)));
     PowerSystems.Examples.Spot.Data.Machines.Asynchron3kV_1p5MVA asyn3k_1p5M
