@@ -24,11 +24,7 @@ package Sources "DC voltage sources"
     phi = theta + alpha + system.alpha0;
     term.v[1] - term.v[2] = V*cos(phi);
     annotation (defaultComponentName = "voltage1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>AC voltage with constant amplitude and phase when 'vType' is 'parameter',<br>
@@ -75,11 +71,7 @@ with variable amplitude and phase when 'vType' is 'signal'.</p>
     phi = h*(theta + alpha + system.alpha0) + h.*alpha0;
     term.v[1] - term.v[2] = V*veff*cos(phi);
     annotation (defaultComponentName = "voltage1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>AC voltage spectrum with constant amplitude and phase when 'vType' is 'parameter',<br>
@@ -133,11 +125,7 @@ where
     end if;
     term.v[1] - term.v[2] = v;
     annotation (defaultComponentName = "voltage1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>DC voltage with constant amplitude when 'vType' is 'parameter',<br>
@@ -177,11 +165,7 @@ with variable amplitude when 'vType' is 'signal'.</p>
     term.v[1] - term.v[2] = v;
     term.i[1] = -i;
     annotation (defaultComponentName = "battery1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p><b>Preliminary:</b> Battery is DC voltage with constant amplitude.<br>
@@ -233,7 +217,7 @@ To be completed later with charging and discharging characteristic.</p>
         choice=-1 "negative"));
       parameter Boolean scType_par = true
         "= true: voltage defined by parameter otherwise by input signal"
-       annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+       annotation(Evaluate=true, choices(checkBox=true));
 
                                    Interfaces.Electric_p
         neutral "(use for grounding)"
@@ -253,13 +237,7 @@ To be completed later with charging and discharging characteristic.</p>
 
       sum(term.i) + neutral.i = 0;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>Allows positive, symmetrical, and negativ grounding according to the choice of parameter 'pol'.<br>
@@ -285,7 +263,7 @@ If the connector 'neutral' remains unconnected, then the source is NOT grounded.
     partial model ACvoltageBase "AC voltage base"
 
       parameter Boolean fType_sys = true
-        "= true, if source has system frequency" annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+        "= true, if source has system frequency" annotation(Evaluate=true, choices(checkBox=true));
       parameter Boolean fType_par = true
         "= true, if source has parameter frequency, otherwise defined by input omega"
                                     annotation(Evaluate=true, Dialog(enable=not fType_sys));
@@ -341,13 +319,7 @@ If the connector 'neutral' remains unconnected, then the source is NOT grounded.
         der(theta) = omega_internal;
       end if;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -392,13 +364,7 @@ If the connector 'neutral' remains unconnected, then the source is NOT grounded.
       end if;
 
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -418,23 +384,10 @@ If the connector 'neutral' remains unconnected, then the source is NOT grounded.
             extent={{-100,-100},{100,100}},
             grid={2,2}), graphics));
     end DCvoltageBase;
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.35,
-  height=0.27,
-  library=1,
-  autolayout=1));
   end Partials;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>AC sources have the optional inputs:</p>
 <pre>

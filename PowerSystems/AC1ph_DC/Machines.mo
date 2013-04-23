@@ -21,11 +21,6 @@ package Machines "DC-machines, electric part"
     k*w = term.v[1] - term.v[2];
     airgap.tau = -k*term.i[1];
     annotation (defaultComponentName = "emf",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -88,11 +83,6 @@ package Machines "DC-machines, electric part"
     tau_el = i*(c.L_md*i);
     heat.ports.Q_flow = -c.R*i*i;
     annotation (defaultComponentName = "DCser",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>The field (stator) winding and armature (rotor) winding are series-connected.<br>
@@ -132,8 +122,7 @@ L_md depends on the winding ratio between armature and field winding</p>
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
-          grid={2,2}), graphics),
-      DymolaStoredErrors);
+          grid={2,2}), graphics));
   end DCser;
 
   model DCpar "DC machine parallel excited"
@@ -154,11 +143,6 @@ L_md depends on the winding ratio between armature and field winding</p>
     tau_el = i*(c.L_md*i_f);
     heat.ports.Q_flow = -{c.R[1]*i_f*i_f, c.R[2]*i*i};
     annotation (defaultComponentName = "DCpar",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>The field (stator) winding and armature (rotor) winding are parallel-connected
@@ -227,11 +211,6 @@ It can be determined in several ways,<br>
     tau_el = i*c.Psi_pm;
     heat.ports.Q_flow = -{0, c.R*i*i};
     annotation (defaultComponentName = "DCpm",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>The field (stator) winding is replaced by a permanent magnet system, no compensation and commutation poles exist.</p>
@@ -309,13 +288,6 @@ or from the induced armature voltage at nominal (compare with the synchronous ma
       airgap.tau = -pp*tau_el;
       w_el = der(phi_el);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 <p>Contains the pole-pair transformation</p>
@@ -400,13 +372,6 @@ The connector 'airgap' transfers the electromagnetic rotor-torque to the mechani
       final parameter Coefficients.DCser c = Basic.Precalculation.machineDCser(
                                                                               par);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 </html>"),
@@ -457,13 +422,6 @@ The connector 'airgap' transfers the electromagnetic rotor-torque to the mechani
       v_f = field.v[1] - field.v[2];
       i_f = field.i[1];
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 </html>"),
@@ -506,13 +464,6 @@ The connector 'airgap' transfers the electromagnetic rotor-torque to the mechani
       final parameter Coefficients.DCpm c = Basic.Precalculation.machineDCpm(
                                                                             par);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 <p>Magnetic flux base for pu-choice is
@@ -537,23 +488,11 @@ The connector 'airgap' transfers the electromagnetic rotor-torque to the mechani
 
     end DCpmBase;
 
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1),
+    annotation (
           Coordsys(
   extent=[-100, -100; 100, 100],
   grid=[2, 2],
-  component=[20, 20]), Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
+  component=[20, 20]));
   end Partials;
 
 package Parameters "Parameter data for interactive use"
@@ -569,13 +508,6 @@ record DCser "DC machine parameters series excited"
   parameter SIpu.Resistance r_q=0.05 "resistance armature+ (q-axis)";
 
   annotation (defaultComponentName="dc_serPar",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -601,13 +533,6 @@ record DCpar "DC machine parameters parallel excited"
   parameter SIpu.Resistance r_q=0.05 "resistance armature+ (q-axis)";
 
   annotation (defaultComponentName="dc_parPar",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -629,13 +554,6 @@ record DCpm "DC machine parameters permanent magnet excited"
   parameter SIpu.Resistance r_aq=0.05 "resistance armature (q-axis)";
 
   annotation (defaultComponentName="dc_pmPar",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -650,13 +568,6 @@ record DCpm "DC machine parameters permanent magnet excited"
 end DCpm;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Records containing parameters of the corresponding components.</p>
 </html>"),
@@ -678,13 +589,6 @@ record DCser "Coefficients of DC machine series excited"
   final parameter SI.Inductance L_md "mutual inductance";
 
   annotation (defaultComponentName="data",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -708,13 +612,6 @@ record DCpar "Coefficients of DC machine parallel excited"
   final parameter SI.Inductance L_md "mutual inductance";
 
   annotation (defaultComponentName="data",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -736,13 +633,6 @@ record DCpm "Coefficients of DC machine permanent magnet excited"
   final parameter SI.MagneticFlux Psi_pm "flux permanent magnet";
 
   annotation (defaultComponentName="data",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>"),
@@ -757,13 +647,6 @@ record DCpm "Coefficients of DC machine permanent magnet excited"
 end DCpm;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Records containing the result of precalculation, and used in the dynamical equations of the corresponding components.</p>
 </html>
@@ -773,13 +656,6 @@ Documentation(info="<html>
           grid={2,2}), graphics));
 end Coefficients;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>This package contains the <b>electrical part</b> (electrical equations) of DC machines.<br>
 Complete drives are found in package Drives.</p>

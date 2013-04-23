@@ -55,11 +55,7 @@ package DrivesDC "DC drives"
     connect(ramp.y, voltage.vDC) annotation (Line(points={{-60,20},{-44,20},{
             -44,0}}, color={0,0,127}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>DC machine (series-connected) with load (drive along height-profile).</p>
@@ -135,11 +131,7 @@ package DrivesDC "DC drives"
     connect(dcm_par.heat, bdCond.heat) annotation (Line(points={{30,0},{30,0}},
           color={176,0,0}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>DC machine (parallel-connected) with load (drive along height-profile).</p>
@@ -211,11 +203,7 @@ package DrivesDC "DC drives"
     connect(dcm_pm.heat, efficiency.heat) annotation (Line(points={{20,0},{20,
             10},{-10,10},{-10,0}}, color={176,0,0}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>DC machine (permanent magnet) start-up and step-load.</p>
@@ -303,11 +291,7 @@ package DrivesDC "DC drives"
     connect(loadInertia.flange_n, torqueStep.flange) annotation (Line(points={{
             60,-10},{64,-10},{64,30},{70,30}}, color={0,0,0}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>Brushless DC machine (permanent magnet synchronous machine) start-up and step-load.</p>
@@ -380,11 +364,7 @@ package DrivesDC "DC drives"
     connect(machine.heat, efficiency.heat) annotation (Line(points={{10,0},{10,
             10},{-30,10},{-30,0}}, color={176,0,0}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>DC machine (permanent magnet) torque-speed characteristic.</p>
@@ -459,11 +439,7 @@ package DrivesDC "DC drives"
     connect(speedSignal.y, speed.w) annotation (Line(points={{80,-10},{60,-10}},
           color={0,0,127}));
   annotation (
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>Brushless DC machine (permanent magnet synchronous machine) torque-speed characteristic.</p>
@@ -490,13 +466,6 @@ package DrivesDC "DC drives"
   end BLDCcharSpeed;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>DC drives (motors electrical and mechanical).</p>
 <p><a href=\"PowerSystems.UsersGuide.Examples\">up users guide</a></p>

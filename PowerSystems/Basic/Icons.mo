@@ -5,11 +5,7 @@ package Icons "Icons"
     partial block Block "Block icon"
 
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -24,11 +20,7 @@ package Icons "Icons"
     partial block Block0 "Block icon 0"
       extends Block;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -43,11 +35,7 @@ package Icons "Icons"
     partial block Block1 "Block icon 1"
       extends Block;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -61,11 +49,7 @@ package Icons "Icons"
     partial block BlockS "Block icon shadowed"
 
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -80,11 +64,7 @@ package Icons "Icons"
     partial block BlockS0 "Block icon shadowed 0"
       extends BlockS;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -99,11 +79,7 @@ package Icons "Icons"
     partial block BlockS1 "Block icon shadowed 1"
       extends BlockS;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="
 "), Icon(coordinateSystem(
             preserveAspectRatio=false,
@@ -118,13 +94,7 @@ package Icons "Icons"
   partial model Adaptor_abc "Adaptor icon abc"
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -208,13 +178,7 @@ package Icons "Icons"
   partial model Adaptor_dqo "Adaptor icon dqo"
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -294,13 +258,7 @@ package Icons "Icons"
   partial model Inverter "Inverter icon"
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -330,13 +288,7 @@ package Icons "Icons"
   partial model Inverter_abc "Inverter icon"
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -383,13 +335,7 @@ package Icons "Icons"
   partial model Inverter_dqo "Inverter icon"
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -470,11 +416,7 @@ package Icons "Icons"
               textString="%name")}),
       Documentation(
               info="
-"),   Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+"),
       Diagram(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -572,13 +514,6 @@ package Icons "Icons"
               extent={{-120,125},{120,70}},
               lineColor={255,0,0},
               textString="%name")}),
-    Window(
-      x=0.05,
-      y=0.44,
-      width=0.29,
-      height=0.24,
-      library=1,
-      autolayout=1),
     Documentation(info=""),
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
@@ -614,13 +549,6 @@ package Icons "Icons"
               fillColor={255,255,170},
               fillPattern=FillPattern.Solid,
               textString="Base")}),
-    Window(
-      x=0.05,
-      y=0.44,
-      width=0.29,
-      height=0.24,
-      library=1,
-      autolayout=1),
     Documentation(info=""),
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
@@ -656,13 +584,6 @@ package Icons "Icons"
               fillColor={255,255,170},
               fillPattern=FillPattern.Solid,
               textString="Partials")}),
-    Window(
-      x=0.05,
-      y=0.44,
-      width=0.29,
-      height=0.24,
-      library=1,
-      autolayout=1),
     Documentation(info=""),
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
@@ -696,13 +617,6 @@ package Icons "Icons"
               extent={{-85,41},{65,-79}},
               lineColor={95,95,95},
               textString="Examples")}),
-    Window(
-      x=0.05,
-      y=0.44,
-      width=0.29,
-      height=0.24,
-      library=1,
-      autolayout=1),
     Documentation(info=""),
         Diagram(coordinateSystem(
             preserveAspectRatio=false,
@@ -710,13 +624,6 @@ package Icons "Icons"
             grid={2,2}), graphics));
     end Examples;
   annotation (preferedView="info",
-    Window(
-      x=0.05,
-      y=0.41,
-      width=0.4,
-      height=0.32,
-      library=1,
-      autolayout=1),
     Documentation(info="<html>
 </html>
 "));

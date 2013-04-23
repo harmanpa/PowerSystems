@@ -14,11 +14,7 @@ package ImpedancesYD
     R*i = v;
     annotation (
       defaultComponentName="resYD1",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Info see package ACdqo.ImpedancesYD.</p>
@@ -67,11 +63,7 @@ package ImpedancesYD
     G*v = i;
     annotation (
       defaultComponentName="resYD1",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Info see package ACdqo.ImpedancesYD.</p>
@@ -133,11 +125,7 @@ package ImpedancesYD
     end if;
     annotation (
       defaultComponentName="indYD1",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Info see package ACdqo.ImpedancesYD.</p>
@@ -236,11 +224,7 @@ package ImpedancesYD
     end if;
     annotation (
       defaultComponentName="capYD1",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>No phase to phase capacitance.</p>
@@ -348,11 +332,7 @@ package ImpedancesYD
     R*i = v;
     annotation (
       defaultComponentName="resYDnonSym",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Resistor with general resistance matrix, defined in abc inertial system.<br>
@@ -425,11 +405,7 @@ Use only if 'non symmetric' is really desired because this component needs a tim
     der(psi) + omega[2]*j_dqo(psi) + R*i = v;
     annotation (
       defaultComponentName="indYDnonSym",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Inductor with general reactance matrix, defined in abc inertial system.<br>
@@ -544,11 +520,7 @@ Use only if 'non symmetric' is really desired because this component needs a tim
     der(q) + omega[2]*j_dqo(q) + G*v = i;
     annotation (
       defaultComponentName="capYDnonSym",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Capacitor with general susceptance matrix, defined in abc inertial system.<br>
@@ -669,11 +641,7 @@ Use only if 'non symmetric' is really desired because this component needs a tim
     v = Park*v_abc;
     annotation (
       defaultComponentName="varistorYD",
-  Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+
   Documentation(
           info="<html>
 <p>Voltage limiter with hyperbolic tangent characteristic.</p>
@@ -737,11 +705,6 @@ Use only if 'non symmetric' is really desired because this component needs a tim
       omega = der(term.theta);
       v_n = R_n*i_n "equation neutral to ground (if Y-topology)";
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 <p>Y-topology: contains an equation for neutral to ground</p>
@@ -774,11 +737,6 @@ Use only if 'non symmetric' is really desired because this component needs a tim
       Real[3,3] Park = Basic.Transforms.park(
                                             term.theta[2]);
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 <p>Same as ImpedYDBase, but contains additionally a Park-transform which is needed for
@@ -804,11 +762,6 @@ transformation of general impedance matrices from abc rest to general dqo-system
     equation
       Q_flow = v*i;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 <p>Same as ImpedYDBase, but contains an additional heat port.</p>
@@ -836,11 +789,6 @@ transformation of general impedance matrices from abc rest to general dqo-system
     equation
       Q_flow = v_abc.*i_abc;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 <p>Same as ImpedYDNonSymBase, but contains an additional vector heat port.</p>
@@ -855,23 +803,9 @@ transformation of general impedance matrices from abc rest to general dqo-system
             extent={{-100,-100},{100,100}},
             grid={2,2}), graphics));
     end ImpedYDNonSymHeat;
-    annotation (            Window(
-        x=0.05,
-        y=0.44,
-        width=0.31,
-        height=0.23,
-        library=1,
-        autolayout=1));
   end Partials;
 
 annotation (preferedView="info",
-    Window(
-x=0.05,
-y=0.41,
-width=0.4,
-height=0.44,
-library=1,
-autolayout=1),
     Documentation(info="<html>
 <p>Contains lumped impedance models for Y and Delta topology.</p>
 <p>General relations see 'Impedances'.</p>

@@ -526,13 +526,6 @@ end BoundaryBase;
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2}), graphics),
-    Window(
-x=0.05,
-y=0.44,
-width=0.31,
-height=0.26,
-library=1,
-autolayout=1),
     Documentation(
             info="<html>
 </html>

@@ -58,19 +58,13 @@ record BLDC100V_1kVA
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage V_nom=100*sqrt(3/2)/2 "nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1e3 "nom Power (= base if pu)";
   parameter SI.Frequency f_nom=60 "nom frequency";
 
   annotation (defaultComponentName="bldc100_1k",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
+
     Documentation(
           info="<html>
 <p>The relation between source DC voltage V_dc and nominal 3-phase voltage of the synchronous machine V_nom is given by
@@ -106,19 +100,13 @@ record BLDC100V_1kVA_SI
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage V_nom=100*sqrt(3/2)/2 "nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1e3 "nom Power (= base if pu)";
   parameter SI.Frequency f_nom=60 "nom frequency";
 
   annotation (defaultComponentName="bldc100_1k_SI",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
+
     Documentation(
           info="<html>
 <p>The relation between source DC voltage V_dc and nominal 3-phase voltage of the synchronous machine V_nom is given by

@@ -39,11 +39,7 @@ equation
   connect(infBus.neutral, grd2.term)
       annotation (Line(points={{70,10},{70,10}}, color={0,0,255}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>Amplitude and phase of voltage are given in both nodes.<br>
@@ -103,11 +99,7 @@ equation
   connect(infBus.neutral, grd2.term)
       annotation (Line(points={{70,10},{70,10}}, color={0,0,255}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>Power and voltage-amplitude are given in the source node, whereas the slackBus is identical to the previous example.<br>
@@ -166,11 +158,7 @@ equation
   connect(infBus.neutral, grd2.term)
       annotation (Line(points={{70,10},{70,10}}, color={0,0,255}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>Active and reactive power are given in the source node, whereas the slackBus is identical to the previous example.<br>
@@ -285,11 +273,7 @@ end PQsource;
     connect(generator.heat, bdCond.heat)   annotation (Line(points={{-40,20},{
             -40,20}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -418,11 +402,7 @@ The power-angle is artificially fixed. The correspondence is:
     connect(generator.heat, bdCond.heat)   annotation (Line(points={{-40,20},{
             -40,20}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Second example 'from voltage source to generator model' with additional turbine.</p>
@@ -585,11 +565,7 @@ Instead of a fixed power-angle as in the previous example, a turbine delivers th
     connect(generator.heat, bdCond.heat)   annotation (Line(points={{-40,20},{
             -40,20}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>The third example is obtained from the previous by adding a line between generator and infinite bus.</p>
@@ -719,11 +695,7 @@ equation
   connect(turboGen.heat, bdCond.heat)   annotation (Line(points={{-50,20},{-50,
             20}}, color={176,0,0}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>This example is the last step on the way 'from voltage source to generator model'.</p>
@@ -865,11 +837,7 @@ equation
   connect(turboGen2.heat, bdCond2.heat)   annotation (Line(points={{-70,-40},{
             -70,-40}}, color={176,0,0}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>The example illustrates the difference in dynamic behaviour between low- and high-order generator models.<br>
@@ -959,11 +927,7 @@ equation
   connect(turboGrpGen.heat, bdCond.heat)   annotation (Line(points={{-70,20},{
             -70,20}}, color={176,0,0}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>The example illustrates the influence of an electric shock on the mechanical behaviour of the turbogroup.<br>
@@ -1169,11 +1133,7 @@ equation
   connect(turboGen3.heat, bdCond3.heat)   annotation (Line(points={{-10,70},{
             -10,70}}, color={176,0,0}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -1252,11 +1212,7 @@ equation
   connect(trsSignal1.y, windGen.windSpeed)   annotation (Line(points={{-80,10},
             {-60,10}}, color={0,0,127}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>This example shows an asynchron generator directly coupled to the grid.<br>
@@ -1389,11 +1345,7 @@ equation
   connect(turboGen.phiRotor, reference.theta)   annotation (Line(points={{-60,
             -40},{-50,-40}}, color={0,0,127}));
   annotation (
-Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65),
+
 Documentation(
         info="<html>
 <p>Permanent magnet excited synchron generator, rotor defines reference system.<br>
@@ -1533,11 +1485,7 @@ equation
   connect(i_d.y, PMgen.i_act[1]) annotation (Line(points={{-80,-10},{-36,-10},{-36,
           -40.5}},       color={0,0,127}));
   annotation (
-Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65),
+
 Documentation(
         info="<html>
 <p>Permanent magnet excited synchron generator, defining reference system.<br>
@@ -1562,13 +1510,6 @@ experimentSetupOutput);
 end LocalGeneration;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Power sources and generation, a set of examples mainly for understanding the synchronous machine.</p>
 <p><a href=\"PowerSystems.UsersGuide.Examples\">up users guide</a></p>

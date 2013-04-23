@@ -69,11 +69,7 @@ package InvertersAC3ph "Inverters dqo"
     connect(rectifier.heat, bdCond.heat)
       annotation (Line(points={{20,20},{20,20}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -162,11 +158,7 @@ package InvertersAC3ph "Inverters dqo"
     connect(inverter.heat, bdCond.heat)
       annotation (Line(points={{-10,0},{-10,0}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -263,11 +255,7 @@ package InvertersAC3ph "Inverters dqo"
     connect(inverter.heat, bdCond.heat)
       annotation (Line(points={{-20,0},{-20,0}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -362,11 +350,7 @@ package InvertersAC3ph "Inverters dqo"
     connect(inverter.heat, bdCond.heat)
       annotation (Line(points={{-20,0},{-20,0}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -388,13 +372,7 @@ package InvertersAC3ph "Inverters dqo"
   end InverterAvToGrid;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>Comparison of different three-phase rectifier and inverter models.</p>
 <p><a href=\"PowerSystems.UsersGuide.Examples\">up users guide</a></p>

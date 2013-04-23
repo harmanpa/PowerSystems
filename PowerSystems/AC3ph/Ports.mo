@@ -14,11 +14,7 @@ connector ACdqo_p "AC terminal, 3-phase dqo ('positive')"
       Documentation(info="<html>
 <p>AC connector with vector variables in dqo-representation, positive.</p>
 </html>"),
-      Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+    
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -57,11 +53,7 @@ connector ACdqo_n "AC terminal, 3-phase dqo ('negative')"
       Documentation(info="<html>
 <p>AC connector with vector variables in dqo-representation, negative.</p>
 </html>"),
-      Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+    
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -676,11 +668,7 @@ package Topology "Topology transforms "
     constant Real s3=sqrt(3);
       annotation (
         defaultComponentName="Y",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 </html>
@@ -712,11 +700,7 @@ package Topology "Topology transforms "
     i_term = i_cond;
     i_n[1] = s3*i_term[3];
     annotation (defaultComponentName="Y",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p><b>Structurally incomplete model</b>. Use only as component within appropriate complete model.<br>
@@ -782,13 +766,6 @@ Defines Y-topology transform of voltage and current variables.</p>
     i_term[1:2] = s3*transpose(Rot)*i_cond[1:2];
     i_term[3] = 0;
     annotation (structurallyIncomplete=true,defaultComponentName="Delta",
-        Window(
-    x=0.45,
-      y=0.01,
-      width=
-  0.44,
-    height=
-   0.65),
         Documentation(
         info="<html>
 <p><b>Structurally incomplete model</b>. Use only as component within appropriate complete model.<br>
@@ -865,11 +842,7 @@ annotation (Placement(transformation(
     end if;
   //i_n[1] = epsG*v_n[1]; // neutral point isolated
       annotation (defaultComponentName="Y_Delta",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p><b>Structurally incomplete model</b>. Use only as component within appropriate complete model.<br>
@@ -1025,11 +998,7 @@ annotation (Placement(transformation(
     end if;
   //i_n[1] = epsG*v_n[1]; // neutral point isolated
       annotation (defaultComponentName="Y_Delta",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p><b>Structurally incomplete model</b>. Use only as component within appropriate complete model.<br>
@@ -1146,13 +1115,6 @@ Regularised version of Y_Delta. To be used, if device is fed accross an inductiv
               pattern=LinePattern.Dot)}));
   end Y_DeltaRegular;
   annotation (preferedView="info",
-    Window(
-      x=0.05,
-      y=0.41,
-      width=0.4,
-      height=0.32,
-      library=1,
-      autolayout=1),
     Documentation(info="<HTML>
 <p>
 Contains transforms for Y and Delta topology dqo.
@@ -1164,13 +1126,6 @@ Contains transforms for Y and Delta topology dqo.
           grid={2,2}), graphics));
 end Topology;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.03,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Electrical ports with connectors ACdqo:</p>
 <p>The index notation <tt>_p_n</tt> and <tt>_pn</tt> is used for</p>

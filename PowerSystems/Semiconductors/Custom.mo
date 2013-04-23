@@ -6,13 +6,7 @@ record SCparameter "Custom semiconductor parameters"
   extends Basic.Nominal.NominalDataVI;
 
   annotation (
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
+
     Documentation(
           info="<html>
 </html>"),
@@ -38,11 +32,7 @@ model Diode "Diode"
 equation
   i = v*unitAmperePerVolt; // replace!
   annotation (defaultComponentName = "diode1",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 </html>
@@ -81,11 +71,7 @@ model SCswitch "IGBT"
 equation
   i = v*unitAmperePerVolt; // replace!
   annotation (defaultComponentName = "IGBT1",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 </html>"),
@@ -127,11 +113,7 @@ model Thyristor "Thyristor"
 equation
   i = v*unitAmperePerVolt; // replace!
   annotation (defaultComponentName = "thyristor1",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 </html>
@@ -159,13 +141,6 @@ height=0.65),
 end Thyristor;
 
 annotation (preferedView="info",
-    Window(
-x=0.05,
-y=0.41,
-width=0.4,
-height=0.32,
-library=1,
-autolayout=1),
     Documentation(info="<html>
 <p>Intended for custom semiconductor models, replacing ideal components.<br>
 </html>

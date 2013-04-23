@@ -53,11 +53,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(grd1.term, voltage.neutral)
       annotation (Line(points={{-70,0},{-70,0}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -138,11 +134,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(voltage2.neutral, grd2.term)
       annotation (Line(points={{90,-30},{90,-30}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -192,11 +184,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(grd1.term, voltage.neutral)
       annotation (Line(points={{-70,0},{-70,0}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -241,11 +229,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(grd.term, voltage.neutral)
       annotation (Line(points={{-70,0},{-70,0}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -306,11 +290,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(voltage2.neutral, grd2.term)
       annotation (Line(points={{90,0},{90,0}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -362,11 +342,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(trsSignal.y, zLoadAC.p_set)
       annotation (Line(points={{40,50},{40,10}}, color={0,0,127}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -418,11 +394,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(trsSignalL.y, pLoadDC.p_set)
       annotation (Line(points={{40,50},{40,10}}, color={0,0,127}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -489,11 +461,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(transTau.y, torq.tau)
       annotation (Line(points={{80,0},{80,0}}, color={0,0,127}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -544,11 +512,7 @@ package AC1ph_DC "AC 1-phase and DC components"
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2}), graphics),
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 </html>
@@ -588,11 +552,7 @@ package AC1ph_DC "AC 1-phase and DC components"
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2}), graphics),
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 </html>
@@ -672,11 +632,7 @@ package AC1ph_DC "AC 1-phase and DC components"
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2}), graphics),
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -738,11 +694,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(rectifier.heat, boundary.heat)
       annotation (Line(points={{20,10},{20,10}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -818,11 +770,7 @@ package AC1ph_DC "AC 1-phase and DC components"
     connect(dc_ac.heat, boundary.heat)
       annotation (Line(points={{20,10},{20,10}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -839,13 +787,6 @@ package AC1ph_DC "AC 1-phase and DC components"
   end Inverter;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>This package contains small models for testing single components from AC1ph_DC.
 The replaceable component can be replaced by a user defined component of similar type.</p>
@@ -864,13 +805,6 @@ Coordsys(
   extent=[-100, -100; 100, 100],
   grid=[2, 2],
   component=[20, 20]),
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <pre>
 Models for testing components from PowerSystems.AC1ph_DC.

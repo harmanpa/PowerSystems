@@ -24,11 +24,7 @@ package Exciters "Generator Exciters "
   equation
     fieldVoltage = v_f;
     annotation (defaultComponentName = "exciter",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Constant excitation-voltage.</p>
@@ -76,11 +72,7 @@ package Exciters "Generator Exciters "
     connect(setptVoltage, limiter.u)
       annotation (Line(points={{-100,0},{48,0}}, color={0,0,127}));
     annotation (defaultComponentName = "exciter",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Constant excitation-voltage (setpoint value).</p>
@@ -137,11 +129,7 @@ package Exciters "Generator Exciters "
     connect(voltageReg.y, limiter.u)
       annotation (Line(points={{-9,0},{48,0}}, color={0,0,127}));
     annotation (defaultComponentName = "exciter",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>First order control of excitation-voltage.</p>
@@ -197,11 +185,7 @@ package Exciters "Generator Exciters "
     connect(limiter.y, fieldVoltage) annotation (Line(points={{71,0},{80,0},{80,
               -80},{60,-80},{60,-100}}, color={0,0,127}));
     annotation (defaultComponentName = "exciter",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 </html>"),
@@ -218,13 +202,6 @@ package Exciters "Generator Exciters "
 </html>"));
   end Partials;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.24,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 </html>
 "), Icon(coordinateSystem(

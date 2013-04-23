@@ -23,11 +23,7 @@ package Sources "Voltage and Power Sources"
     phi = term.theta[1] + alpha + system.alpha0;
     term.v = {V*cos(phi), V*sin(phi), sqrt(3)*neutral.v};
     annotation (defaultComponentName = "voltage1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Voltage with constant amplitude and phase when 'vType' is 'parameter',<br>
@@ -90,11 +86,7 @@ with variable amplitude and phase when 'vType' is 'signal'.</p>
     end for;
     term.v := V*(H*v0);
     annotation (defaultComponentName = "Vspec1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Voltage spectrum with constant amplitude and phase when 'vType' is 'parameter',<br>
@@ -145,7 +137,7 @@ where
           rotation=270)));
     parameter Boolean scType_par = true
       "= true: voltage defined by parameter otherwise by input signal"
-     annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+     annotation(Evaluate=true, choices(checkBox=true));
     parameter SIpu.Voltage v0=1 "voltage"  annotation(Dialog(enable=scType_par));
     parameter SI.Angle alpha0=0 "phase angle"  annotation(Dialog(enable=scType_par));
 
@@ -169,13 +161,7 @@ where
     phi = term.theta[1] + alpha + system.alpha0;
     term.v = {V*cos(phi), V*sin(phi), sqrt(3)*neutral.v};
     annotation(defaultComponentName = "infBus",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Ideal voltage source with constant amplitude and phase when 'vPhasor' unconnected,<br>
@@ -272,11 +258,7 @@ with variable amplitude and phase when 'vPhasor' connected to a signal-input.</p
       omega[2]*L*j_dqo(i) + R*i = {V*cos(phi), V*sin(phi), sqrt(3)*neutral.v} - v;
     end if;
     annotation (defaultComponentName = "Vsource1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Ideal voltage source with constant amplitude and phase, and with resistive-inductive inner impedance.</p>
@@ -320,7 +302,7 @@ with variable amplitude and phase when 'vPhasor' connected to a signal-input.</p
           rotation=270)));
     parameter Boolean scType_par = true
       "= true: active power defined by parameter otherwise by input signal"
-     annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+     annotation(Evaluate=true, choices(checkBox=true));
     parameter SIpu.ApparentPower p0=1 "active power"
                                              annotation(Dialog(enable=scType_par));
     parameter SIpu.Voltage v0=1 "voltage" annotation(Dialog(enable=scType_par));
@@ -370,11 +352,7 @@ with variable power and voltage when 'pv' connected to a signal-input.</p>
             fillColor={127,0,255},
             fillPattern=FillPattern.Solid,
             textString="PV")}),
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -393,7 +371,7 @@ with variable power and voltage when 'pv' connected to a signal-input.</p>
           rotation=270)));
     parameter Boolean scType_par = true
       "= true: apparent power defined by parameter otherwise by input signal"
-     annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+     annotation(Evaluate=true, choices(checkBox=true));
 
     parameter SIpu.ApparentPower pq0[2]={1,0} "{active, reactive} power"
                                                                 annotation(Dialog(enable=scType_par));
@@ -439,11 +417,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
             fillColor={127,0,255},
             fillPattern=FillPattern.Solid,
             textString="PQ")}),
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -473,13 +447,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
 
       sqrt(3)*term.i[3] + neutral.i = 0;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>If the connector 'neutral' remains unconnected, then the source has an isolated neutral point. In all other cases connect 'neutral' to the desired circuit or ground.</p>
@@ -498,7 +466,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
       extends SourceBase(final S_nom=1);
 
       parameter Boolean fType_sys = true
-        "= true, if source has system frequency" annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+        "= true, if source has system frequency" annotation(Evaluate=true, choices(checkBox=true));
       parameter Boolean fType_par = true
         "= true, if source has parameter frequency, otherwise defined by input omega"
                                     annotation(Evaluate=true, Dialog(enable=not fType_sys));
@@ -507,7 +475,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
 
       parameter Boolean scType_par = true
         "= true: voltage defined by parameter otherwise by input signal"
-       annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+       annotation(Evaluate=true, choices(checkBox=true));
 
       Modelica.Blocks.Interfaces.RealInput omega(final unit="rad/s") if not fType_par
         "ang frequency"
@@ -553,13 +521,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
         der(theta) = omega_internal;
       end if;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -599,13 +561,7 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
     equation
       theta=system.theta;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -635,23 +591,10 @@ with variable (active, reactive) power when 'pq' connected to a signal-input.</p
             extent={{-100,-100},{100,100}},
             grid={2,2}), graphics));
     end PowerBase;
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>The sources have optional inputs:</p>
 <pre>
