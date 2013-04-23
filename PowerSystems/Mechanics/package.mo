@@ -5,7 +5,7 @@ package Mechanics "Mechanical components"
 
 annotation (preferedView="info",
 Documentation(info="<html>
-<p><a href=\"Spot3.UsersGuide.Overview\">up users guide</a></p>
+<p><a href=\"modelica://PowerSystems.UsersGuide.Overview\">up users guide</a></p>
 </html>
 "));
 end Mechanics;
