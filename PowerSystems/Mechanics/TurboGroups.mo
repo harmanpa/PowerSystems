@@ -898,7 +898,7 @@ torque control for speed &lt  speed_thr (speed threshold)
 
     Modelica.Blocks.Tables.CombiTable1Ds table(table=[0,0,1; 0,1,1],
       final tableName=tableName,
-      final fileName=fileName,
+      final fileName=ModelicaServices.ExternalReferences.loadResource(fileName),
       columns={2},
       final tableOnFile=true) "{wind speed m/s, torque pu}"
       annotation (Placement(transformation(extent={{-20,-20},{20,20}}, rotation=

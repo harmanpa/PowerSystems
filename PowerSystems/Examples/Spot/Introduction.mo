@@ -736,7 +736,7 @@ Select 'Diagram' in the Simulation layer</p>
       columns=icol,
       tableOnFile=true,
       tableName="values",
-      fileName=TableDir + "TableExample.tab")
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "TableExample.tab"))
                              annotation (Placement(transformation(extent={{-20,
               -20},{20,20}}, rotation=0)));
 

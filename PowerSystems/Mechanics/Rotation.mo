@@ -1421,7 +1421,7 @@ end PowerSensor;
 
     Modelica.Blocks.Tables.CombiTable1Ds table(
       final tableName=tableName,
-      final fileName=fileName,
+      final fileName=ModelicaServices.ExternalReferences.loadResource(fileName),
       final columns={colData},
       tableOnFile=true) "{time t .. force f ..}"
         annotation (Placement(transformation(extent={{-20,-20},{20,20}},

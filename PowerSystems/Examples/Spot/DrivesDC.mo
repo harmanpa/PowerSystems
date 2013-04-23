@@ -34,7 +34,7 @@ package DrivesDC "DC drives"
       D=1.5e3,
       slope_perc=2.5,
       tableName="height",
-      fileName=TableDir + "hNormProfile.tab",
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "hNormProfile.tab"),
       colData=3)
     annotation (Placement(transformation(extent={{60,-20},{80,0}}, rotation=0)));
     PowerSystems.Examples.Spot.Data.Machines.DCser1500V_1p5MVA DCs1500_1p5M
@@ -109,7 +109,7 @@ package DrivesDC "DC drives"
       scale=true,
       D=1.5e3,
       tableName="height",
-      fileName=TableDir + "hNormProfile.tab",
+      fileName=ModelicaServices.ExternalReferences.loadResource(TableDir + "hNormProfile.tab"),
       colData=3,
       mass=200e3,
       slope_perc=2.5,
