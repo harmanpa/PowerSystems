@@ -562,13 +562,6 @@ i.e. for negative t y takes its asymptotic values.</p>
 </html>"));
     end sign_lt;
     annotation (preferedView="info",
-  Window(
-    x=0.05,
-    y=0.41,
-    width=0.4,
-    height=0.38,
-    library=1,
-    autolayout=1),
   Documentation(info="<html>
 </html>
 "),   Icon(coordinateSystem(

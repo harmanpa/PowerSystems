@@ -60,11 +60,7 @@ package Introduction "Introductory examples"
     connect(grdV2.term, voltage_pu.neutral) annotation (Line(points={{-70,-30},
             {-60,-30}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -166,11 +162,7 @@ and other meter-signals.</p>
     connect(theta_dqo.y, voltage2.omega) annotation (Line(points={{-60,-10},{
             -36,-10},{-36,-20}}, color={0,0,127}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -228,11 +220,7 @@ and other meter-signals.</p>
     connect(grdV_dqo.term, voltage_dqo.neutral) annotation (Line(points={{-70,
             -30},{-60,-30}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -292,11 +280,7 @@ Compare with the signals of the identical system in the example below.</p>
     connect(grdV_dqo.term, voltage_dqo.neutral) annotation (Line(points={{-70,
             -30},{-60,-30}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -356,11 +340,7 @@ Compare with the signals of the identical system in the example above.</p>
     connect(grdV_dqo.term, voltage_dqo.neutral) annotation (Line(points={{-70,
             -30},{-60,-30}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Documentation(
             info="<html>
 <p>With 'system.ini = steady' (using the steady-state initial conditions) no inrush is observed as in the previous two examples. The solution is steady-state from the beginning.</p>
@@ -473,11 +453,7 @@ Compare with the signals of the identical system in the example above.</p>
     connect(grdB.term, voltageB.neutral)
       annotation (Line(points={{20,-90},{20,-81}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Documentation(
             info="<html>
 <p>With 'system.sim = transient' fast dynamics after switching are resolved.</p>
@@ -591,11 +567,7 @@ and other meter-signals.</p>
     connect(voltageB.neutral, grdB.term)
       annotation (Line(points={{20,-81},{20,-90}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Documentation(
             info="<html>
 <p>With 'system.sim = steady' transients are suppressed and only slow dynamics, imposed by the source-voltage is resolved.<br>
@@ -696,11 +668,7 @@ and other meter-signals.</p>
     connect(voltageR.neutral, grdV2.term)
       annotation (Line(points={{80,40},{90,40}}, color={0,0,255}));
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Documentation(
             info="<html>
 <p>The example shows the use of a display element for voltage and current 'phasors' with additional power bars.</p>
@@ -746,11 +714,7 @@ Select 'Diagram' in the Simulation layer</p>
     table.u = u;
     y = table.y;
   annotation (
-    Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
+
     Documentation(
             info="<html>
 <p>The example shows the use of a table.<br>
@@ -777,13 +741,6 @@ Interpolates table-values.</p>
   end Tables;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Each of the introductory examples points out one specific aspect of specifying and simulating a model.
 The examples are based on most elementary configurations. A meter is added for convenience, displaying signals both in abc- and dqo-representation. </p>

@@ -12,11 +12,6 @@ package Impedances "Impedance and admittance two terminal"
   equation
     diagonal(R)*i = v;
     annotation (defaultComponentName="res1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -55,11 +50,6 @@ package Impedances "Impedance and admittance two terminal"
   equation
     diagonal(G)*v = i;
     annotation (defaultComponentName="cond1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -101,11 +91,6 @@ package Impedances "Impedance and admittance two terminal"
   equation
     L*der(i) + diagonal(R)*i = v;
     annotation (defaultComponentName="ind1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -170,11 +155,6 @@ package Impedances "Impedance and admittance two terminal"
   equation
     diagonal(C)*der(v) + diagonal(G)*v = i;
     annotation (defaultComponentName="cap1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>No pair capacitance.</p>
@@ -258,11 +238,6 @@ package Impedances "Impedance and admittance two terminal"
   equation
     L*der(i) + R*i = v;
     annotation (defaultComponentName="impedance1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>This model corresponds to AC1ph_DC.Inductor, but uses a different determination of the coefficients.<br>
@@ -351,11 +326,6 @@ Instead of x and r the parameters z_abs and cos(phi) are used.</p>
   equation
     C*der(v) + G*v = i;
     annotation (defaultComponentName="admittance1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>This model corresponds to AC1_DC.Capacitor, but uses a different determination of the coefficients.<br>
@@ -450,11 +420,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
   equation
     v = V0*tanh(H0*i);
     annotation (defaultComponentName="varistor",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Voltage limiter with hyperbolic tangent characteristic.</p>
@@ -524,11 +489,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
     connect(resSym.neutral, neutral) annotation (Line(points={{-20,
             -1.22465e-015},{-20,-40},{0,-40},{0,-100}}, color={0,0,255}));
     annotation (defaultComponentName="resSym",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 </html>
@@ -597,11 +557,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
     connect(capSym.neutral, neutral) annotation (Line(points={{-20,
             -1.22461e-015},{-20,-40},{0,-40},{0,-100}}, color={0,0,255}));
     annotation (defaultComponentName="capSym",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 </html>
@@ -724,11 +679,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
     connect(p_n_pn.term_pn, term_n)
       annotation (Line(points={{76,0},{100,0}}, color={0,0,255}));
     annotation (defaultComponentName="dcLink",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 </html>
@@ -820,11 +770,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
     connect(p_n_pn.term_pn, term_n)
       annotation (Line(points={{76,0},{100,0}}, color={0,0,255}));
     annotation (defaultComponentName="dcLink",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 </html>
@@ -863,13 +808,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
     annotation (Placement(transformation(extent={{90,-10},{110,10}}, rotation=0)));
 
     annotation (
-      Window(
-        x=0.45,
-        y=0.01,
-        width=
-      0.44,
-        height=
-       0.65),
       Documentation(
             info="<html>
 </html>
@@ -899,13 +837,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
       v = term_p.v - term_n.v;
       i = term_p.i;
     annotation (
-      Window(
-        x=0.45,
-        y=0.01,
-        width=
-      0.44,
-        height=
-       0.65),
       Documentation(
             info="<html>
 </html>
@@ -927,13 +858,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
       extends ImpedBase;
       extends Interfaces.AddHeat;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 <p>Same as ImpedBase, but contains an additional heat port.</p>
@@ -957,11 +881,6 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
   equation
     Q_flow = v.*i;
     annotation (
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
     Documentation(
     info="<html>
 <p>Same as ImpedBase, but contains an additional vector heat port.</p>
@@ -977,23 +896,9 @@ Instead of b and g the parameters y_abs and cos(phi) are used.</p>
             grid={2,2}), graphics));
   end ImpedNonSymHeat;
 
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Contains lumped impedance models and can also be regarded as a collection of basic formulas. Shunts are part of a separate package.</p>
 <p>General relations.</p>

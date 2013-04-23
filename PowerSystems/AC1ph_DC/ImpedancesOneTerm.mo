@@ -12,11 +12,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
   equation
     R*i = v;
     annotation (defaultComponentName="res1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -50,11 +45,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
   equation
     G*v = i;
     annotation (defaultComponentName="cond1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -91,11 +81,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
   equation
     L*der(i) + R*i = v;
     annotation (defaultComponentName="ind1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -141,11 +126,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
   equation
     C*der(v) + G*v = i;
     annotation (defaultComponentName="cap1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Info see package AC1ph_DC.Impedances.</p>
@@ -205,11 +185,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
   equation
     v = V0*tanh(H0*i);
     annotation (defaultComponentName="varistor",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p> Voltage limiter with hyperbolic tangent characteristic.</p>
@@ -251,13 +226,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
       v = term.v[1] - term.v[2];
       i = term.i[1];
     annotation (
-      Window(
-        x=0.45,
-        y=0.01,
-        width=
-      0.44,
-        height=
-       0.65),
       Documentation(
             info="<html>
 </html>
@@ -278,13 +246,6 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
       extends ImpedBase;
       extends Interfaces.AddHeat;
       annotation (
-    Window(
-      x=0.45,
-      y=0.01,
-      width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 <p>Same as ImpedBase, but contains an additional heat port.</p>
@@ -300,23 +261,9 @@ package ImpedancesOneTerm "Impedance and admittance one terminal"
             grid={2,2}), graphics));
     end ImpedBaseHeat;
 
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p>Contains lumped impedance models with one terminal.</p>
 <p>General relations see AC1ph_DC.Impedances.</p>

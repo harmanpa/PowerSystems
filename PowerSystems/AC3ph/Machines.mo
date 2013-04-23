@@ -15,11 +15,7 @@ package Machines "AC machines, electric part "
     end if;
     annotation (
       defaultComponentName="asynchron",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Equivalent circuit is on <b>diagram layer</b> of parameter record ACdqo.Machines.Parameters.*</p>
@@ -56,11 +52,7 @@ package Machines "AC machines, electric part "
           {-80,40},{40,40},{40,20}}, color={255,0,255}));
 */
   annotation (defaultComponentName = "asynchron",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>Equivalent circuit is on <b>diagram layer</b> of parameter record ACdqo.Machines.Parameters.*</p>
@@ -137,11 +129,7 @@ package Machines "AC machines, electric part "
     uPhasor = {sqrt(v_dq*v_dq)/par.V_nom, atan2(v_dq[2], v_dq[1]) + atan2(sin(alpha_psi - term.theta[1]), cos(alpha_psi - term.theta[1]))};
     annotation (
       defaultComponentName="asynchron",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>This model is intended for field-oriented control. The input/output current-signals 'i_meas'/'i_act' represent the pu stator current in the rotorflux-fixed reference system:
@@ -201,11 +189,7 @@ The mapping from current demand to voltage demand is based on the steady-state e
     end if;
     powerAngle = noEvent(mod(phi_el - term.theta[2] - atan2(-v[1], v[2]) + pi, 2*pi)) - pi;
     annotation (defaultComponentName = "synchron",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Equivalent circuit is on <b>diagram layer</b> of parameter record ACdqo.Machines.Parameters.*</p>
@@ -254,11 +238,7 @@ The mapping from current demand to voltage demand is based on the steady-state e
     end if;
     powerAngle = noEvent(mod(phi_el - term.theta[2] - atan2(-v[1], v[2]) + pi, 2*pi)) - pi;
   annotation (defaultComponentName = "synchron",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>Equivalent circuit is on <b>diagram layer</b> of parameter record ACdqo.Machines.Parameters.*</p>
@@ -372,11 +352,7 @@ The mapping from current demand to voltage demand is based on the steady-state e
       v_rd[1] = 0;
     end if;
   annotation (defaultComponentName = "synchron",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>Equivalent circuit is on <b>diagram layer</b> of parameter record ACdqo.Machines.Parameters.*</p>
@@ -536,11 +512,7 @@ The mapping from current demand to voltage demand is based on the steady-state e
        + c.R_s*i_dq;
     uPhasor = {sqrt(v_dq*v_dq)/par.V_nom,atan2(v_dq[2], v_dq[1])};
   annotation (defaultComponentName = "synchron",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>This model is intended for field-oriented control. The input/output current-signals 'i_meas'/'i_act' represent the pu stator current in the rotor-fixed reference system:
@@ -612,13 +584,7 @@ The mapping from current demand to voltage demand is based on the steady-state e
       airgap.tau = -pp*tau_el;
       w_el = der(phi_el);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>Contains the pole-pair transformation</p>
@@ -804,11 +770,7 @@ More info see at 'Machines.Asynchron' and 'Machines.Synchron'.</p>
       heat.ports.Q_flow = -{c.R_s*i*i, diagonal(R_r)*i_rd*i_rd + diagonal(R_r)*i_rq*i_rq};
     annotation (
       defaultComponentName="asynchron",
-        Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
         Documentation(
           info="<html>
 <p>The stator contains one winding each in d-axis, q-axis, o-axis.<br>
@@ -927,13 +889,7 @@ Special choices are</p>
       v_s = cat(1, transpose(Rot_dq)*v[1:2], {v[3]});
       i = cat(1, Rot_dq*i_s[1:2], {i_s[3]});
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>Contains the transformation of stator voltage and current from the dqo reference-frame to the dqo rotor-frame.<br>
@@ -994,13 +950,7 @@ The transformation angle is the (electric) rotor-angle relative to the reference
       tau_el = i_s[1:2]*{-psi_s[2], psi_s[1]};
       heat.ports.Q_flow = -{c.R_s*i_s*i_s, 0};
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>'Voltage behind synchronous reactance', simplified model of synchronous machine.<br>
@@ -1118,13 +1068,7 @@ where <tt>psi_pm</tt> relates to the induced armature voltage <tt>v_op</tt> at o
       tau_el = i_s[1:2]*{-psi_s[2], psi_s[1]};
       heat.ports.Q_flow = -{c.R_s*i_s*i_s, diagonal(R_rd)*i_rd*i_rd + diagonal(R_rq)*i_rq*i_rq};
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 <p>General model of synchronous machine.<br>
@@ -1216,14 +1160,6 @@ where <tt>psi_pm</tt> relates to the induced armature voltage <tt>v_op</tt> at o
               fillColor={175,175,175},
               fillPattern=FillPattern.Solid)}));
     end SynchronBase;
-
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
 
   package Control
@@ -1260,11 +1196,7 @@ where <tt>psi_pm</tt> relates to the induced armature voltage <tt>v_op</tt> at o
     termVoltage = term.v/V_nom;
     field.v = {fieldVoltage*Vf_nom, 0};
   annotation (defaultComponentName = "excitation",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>This is a default model. The excitation-voltage is directly determined by the pu field-voltage control-signal.<br>
@@ -1323,11 +1255,7 @@ It does not contain any electronic component.</p>
     phi_el = delta + atan2(-term.v[1], term.v[2]) + term.theta[2]; // steady state!
   //  der(phi_el) = gamma*(delta + atan2(-term.v[1], term.v[2]) + term.theta[2] - phi_el);
   annotation (defaultComponentName = "powerAngle",
-    Window(
-        x=0.45,
-        y=0.01,
-        width=0.44,
-        height=0.65),
+  
     Documentation(
             info="<html>
 <p>
@@ -1380,13 +1308,7 @@ package Parameters "Parameter data for interactive use"
     parameter SIpu.Resistance r_n "resistance neutral to grd (if Y)" annotation(Dialog(enable=not neu_iso));
 
     annotation (defaultComponentName="asyn3rdPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -1518,13 +1440,7 @@ package Parameters "Parameter data for interactive use"
       annotation(Dialog(enable=not transDat));
 
     annotation (defaultComponentName="asynPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -1669,13 +1585,7 @@ package Parameters "Parameter data for interactive use"
       r_n=1);
 
     annotation (defaultComponentName="asyn3rdPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -1709,13 +1619,7 @@ package Parameters "Parameter data for interactive use"
       r_r={0.04});
 
     annotation (defaultComponentName="asynPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -1768,13 +1672,7 @@ package Parameters "Parameter data for interactive use"
     parameter SIpu.Resistance r_n "resistance neutral to grd (if Y)" annotation(Dialog(enable=not neu_iso));
 
     annotation (defaultComponentName="syn3rdPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
@@ -1879,8 +1777,7 @@ package Parameters "Parameter data for interactive use"
                 extent={{-70,82},{-50,78}},
                 lineColor={0,0,255},
                 fillColor={0,0,255},
-                fillPattern=FillPattern.Solid)}),
-      DymolaStoredErrors);
+                fillPattern=FillPattern.Solid)}));
   end Synchron3rd;
 
   record Synchron "Synchronous machine parameters"
@@ -1944,13 +1841,7 @@ package Parameters "Parameter data for interactive use"
       annotation(Dialog(group="Nominal", enable=not pm_exc));
 
     annotation (defaultComponentName="synPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
@@ -2181,8 +2072,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
                 fillColor={255,255,255},
                 fillPattern=FillPattern.Solid,
                 textString=
-                   "xsig_rq1")}),
-      DymolaStoredErrors);
+                   "xsig_rq1")}));
   end Synchron;
 
   record Synchron3rd_ee "Synchronous machine 3rd order parameters"
@@ -2198,13 +2088,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       r_n=1);
 
     annotation (defaultComponentName="syn3rd_elPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
@@ -2217,8 +2101,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       Diagram(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
-              grid={2,2}), graphics),
-      DymolaStoredErrors);
+              grid={2,2}), graphics));
   end Synchron3rd_ee;
 
   record Synchron_ee "Synchronous machine parameters"
@@ -2256,13 +2139,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
 
   //  example: V_nom=20e3, S_nom=500e6, If_nom=1500.
     annotation (defaultComponentName="syn_elPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
@@ -2307,8 +2184,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       Diagram(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
-              grid={2,2}), graphics),
-      DymolaStoredErrors);
+              grid={2,2}), graphics));
   end Synchron_ee;
 
   record Synchron3rd_pm "Synchronous machine pm 3rd order parameters"
@@ -2323,13 +2199,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       r_s=0.05,
       r_n=1)
     annotation (defaultComponentName="syn3rd_pmPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -2383,13 +2253,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       If_nom=0);
 
     annotation (defaultComponentName="syn_pmPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
@@ -2431,8 +2295,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       Diagram(coordinateSystem(
               preserveAspectRatio=false,
               extent={{-100,-100},{100,100}},
-              grid={2,2}), graphics),
-      DymolaStoredErrors);
+              grid={2,2}), graphics));
   end Synchron_pm;
 
   record Synchron3rd_reluctance "Synchronous machine pm 3rd order parameters"
@@ -2447,13 +2310,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
       r_s=0.05,
       r_n=1);
     annotation (defaultComponentName="syn_reluctPar",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Equivalent circuit on <b>diagram layer</b>!</p>
@@ -2468,13 +2325,7 @@ Therefore we have to use the following definition for the phase-angle of i_f:
               grid={2,2}), graphics));
   end Synchron3rd_reluctance;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>Records containing parameters of the corresponding components.</p>
 </html>"),
@@ -2539,13 +2390,7 @@ annotation(Diagram(graphics), Documentation(info="<html>
 </html>"));
 end Synchron;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.38,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>Records containing the result of precalculation, and used in the dynamical equations of the corresponding components.</p>
 </html>
@@ -2556,13 +2401,7 @@ Documentation(info="<html>
 end Coefficients;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p> This package contains the <b>electrical part</b> (electrical equations) of AC synchronous and asynchronous machines (generators or motors).<br>
 Complete drives or generators are found in package Drives or Generation.</p>

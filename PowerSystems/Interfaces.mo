@@ -18,11 +18,7 @@ package Interfaces
   Documentation(info="<html>
 </html>
 "),
-  Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65),
+  
   Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -49,11 +45,7 @@ package Interfaces
     annotation (defaultComponentName = "term_n",
   Documentation(info="<html>
 </html>"),
-  Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65),
+  
   Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -299,11 +291,7 @@ package Interfaces
             lineColor={120,0,120},
             fillColor={255,255,255},
             fillPattern=FillPattern.Solid)}),
-    Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+  
     Documentation(info="<html>
 <p>System frequency reference.<br>
 Used in 'System' for sending/receiving weighted frequency-data.</p>
@@ -324,13 +312,7 @@ Used in 'System' for sending/receiving weighted frequency-data.</p>
     sendFreq.H = -H;
     sendFreq.w_H = -H*w;
     annotation (defaultComponentName = "sendFreq",
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 <p>Contains system frequency reference.<br>

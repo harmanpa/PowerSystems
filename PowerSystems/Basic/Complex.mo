@@ -288,13 +288,6 @@ package Complex "Complex functions (preliminary package)"
 </html>"));
   end atanhC;
     annotation (preferedView="info",
-  Window(
-    x=0.05,
-    y=0.41,
-    width=0.4,
-    height=0.38,
-    library=1,
-    autolayout=1),
   Documentation(info="<html>
 <p>Auxiliary package, to be used until Complex type is available in Modelica.
 Complex numbers are represented as 2x2 matrix, such that arithmetic operations on complex numbers become equivalent to arithmetic operations on their matrix representations.</p>

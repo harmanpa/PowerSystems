@@ -46,11 +46,7 @@ equation
     connect(grd2.term, infBus2.neutral)
       annotation (Line(points={{80,10},{80,10}}, color={0,0,255}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>Shows the influence of phase-difference on power flow.<br>
@@ -161,11 +157,7 @@ equation
   connect(infBus.neutral, grd4.term)
       annotation (Line(points={{60,10},{60,10}}, color={0,0,255}));
   annotation (
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
+
     Documentation(
             info="<html>
 <p>Power flow between source and infinite bus. The bus-voltage decreases from 1 to 0.
@@ -250,11 +242,7 @@ end VoltageStability;
     connect(infBus2.neutral, grd2.term)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Short-time line switched off.<br>
@@ -333,11 +321,7 @@ Compare with PIline.</p>
     connect(infBus2.neutral, grd2.term)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -424,11 +408,7 @@ Compare with RXline.</p>
     connect(infBus2.neutral, grd2.term)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Fault clearance by short-time line switched off.<br>
@@ -515,11 +495,7 @@ Compare with FaultPIline.</p>
     connect(infBus2.neutral, grd2.term)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Diagram(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -633,11 +609,7 @@ Compare with FaultRXline.</p>
     connect(InfBus2.neutral, grd2.term)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Fault clearance by short-time line switched off.<br>
@@ -750,11 +722,7 @@ Compare with DoublePIline.</p>
     connect(grd2.term, InfBus2.neutral)
       annotation (Line(points={{90,-10},{90,-10}}, color={0,0,255}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Fault clearance by short-time line switched off.<br>
@@ -880,11 +848,7 @@ Compare with DoublePIline.</p>
     connect(turbGen.heat, boundary.heat)
       annotation (Line(points={{-80,0},{-80,0}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Fault clearance by short-time line switched off.<br>
@@ -1007,11 +971,7 @@ Compare with DoublePIline.</p>
     connect(turbGen.heat, boundary.heat)
       annotation (Line(points={{-80,0},{-80,0}}, color={176,0,0}));
     annotation (
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>Fault clearance by short-time line switched off.<br>
@@ -1037,13 +997,7 @@ Compare with DoublePIline.</p>
       experimentSetupOutput);
   end DoublePIlineTG;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.42,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>Transmission line models and faults.</p>
 <p><a href=\"PowerSystems.UsersGuide.Examples\">up users guide</a></p>

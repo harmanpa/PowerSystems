@@ -19,13 +19,7 @@ package Sensors "Sensors and meters 3-phase"
   equation
     v = sqrt(term.v[1:n_eval]*term.v[1:n_eval]);
   annotation (defaultComponentName = "Vsensor1",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 </html>
@@ -60,13 +54,7 @@ package Sensors "Sensors and meters 3-phase"
   equation
     i = sqrt(term_p.i[1:n_eval]*term_p.i[1:n_eval]);
   annotation (defaultComponentName = "Isensor1",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 </html>
@@ -100,13 +88,7 @@ package Sensors "Sensors and meters 3-phase"
       v = transpose(park(term.theta[2]))*term.v; // abc
     end if;
   annotation (defaultComponentName = "Vsensor1",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 <p>The parameter 'signalTrsf' allows the choice of different reference systems for the output signal<br>
@@ -155,13 +137,7 @@ package Sensors "Sensors and meters 3-phase"
       i = transpose(park(term_p.theta[2]))*term_p.i; // abc
     end if;
   annotation (defaultComponentName = "Isensor1",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 <p>The parameter 'signalTrsf' allows the choice of different reference systems for the output signal<br>
@@ -198,13 +174,7 @@ package Sensors "Sensors and meters 3-phase"
   equation
     p = {term_p.v[1:2]*term_p.i[1:2], -j_dqo(term_p.v[1:2])*term_p.i[1:2], term_p.v[3]*term_p.i[3]};
   annotation (defaultComponentName = "Psensor1",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 <p><i>Comment on the sign-definition of reactive power see</i> ACdqo.Sensors.</p>
@@ -245,11 +215,7 @@ package Sensors "Sensors and meters 3-phase"
     v = term.v/V_base;
     vpp = sqrt(3)*{v[2],-v[1]};
     annotation (defaultComponentName = "Vmeter1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -300,11 +266,7 @@ As they use time-dependent coordinate transforms, use them only when and where n
   equation
     i = term_p.i/I_base;
     annotation (defaultComponentName = "Imeter1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Documentation(
               info="<html>
 <p>'Meters' are intended as diagnostic instruments. They allow displaying signals in alternative representations, both in SI-units or in 'pu'.<br>
@@ -324,8 +286,7 @@ As they use time-dependent coordinate transforms, use them only when and where n
           grid={2,2}), graphics={
           Line(points={{-15,50},{15,64}}, color={135,135,135}),
           Line(points={{-15,40},{15,54}}, color={135,135,135}),
-          Line(points={{-15,30},{15,44}}, color={135,135,135})}),
-      DymolaStoredErrors);
+          Line(points={{-15,30},{15,44}}, color={135,135,135})}));
   end Imeter;
 
   model Pmeter "Power meter, 3-phase dqo"
@@ -355,11 +316,7 @@ As they use time-dependent coordinate transforms, use them only when and where n
       pav = zeros(3);
     end if;
     annotation (defaultComponentName = "Pmeter1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -435,11 +392,7 @@ Use them only when and where needed. Otherwise use 'Sensors'.</p>
       pav = zeros(3);
     end if;
     annotation (defaultComponentName = "PVImeter1",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -544,13 +497,7 @@ As they use time-dependent coordinate transforms, use them only when and where n
       eta = 0;
     end if;
   annotation (defaultComponentName = "efficiency",
-    Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
     Documentation(
             info="<html>
 <p>Measures the electric power <tt>p</tt> flowing from 'term_p' to 'term_n' and the total heat inflow <tt>q</tt> at term 'heat'. The efficiency eta in % is then defined by
@@ -609,11 +556,7 @@ In problematic cases use power sensors electrical and mechanical.</p>
     color_n = if p[1]<0 then {0,127,127} else {215,215,215};
   annotation (
     defaultComponentName="phasor",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
       Icon(coordinateSystem(
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
@@ -663,13 +606,7 @@ In problematic cases use power sensors electrical and mechanical.</p>
     equation
       term.i = zeros(3);
     annotation (
-      Window(
-        x=0.45,
-        y=0.01,
-        width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 </html>"),
@@ -709,13 +646,7 @@ In problematic cases use power sensors electrical and mechanical.</p>
     equation
       term_p.v = term_n.v;
     annotation (
-      Window(
-        x=0.45,
-        y=0.01,
-        width=
-      0.44,
-        height=
-       0.65),
+
       Documentation(
             info="<html>
 </html>"),
@@ -760,13 +691,7 @@ In problematic cases use power sensors electrical and mechanical.</p>
       Real[2,2] Rot_dq = rot_dq(term.theta[1]) if phasor;
       function atan2 = Modelica.Math.atan2;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -793,13 +718,7 @@ In problematic cases use power sensors electrical and mechanical.</p>
       Real[2,2] Rot_dq = rot_dq(term_p.theta[1]) if phasor;
       function atan2 = Modelica.Math.atan2;
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
+
         Documentation(
               info="<html>
 </html>"),
@@ -835,11 +754,6 @@ In problematic cases use power sensors electrical and mechanical.</p>
     i_dq = transpose(Rot_dq)*term_p.i[1:2]/I_base;
     p = {v_dq*i_dq, -j_dqo(v_dq)*i_dq};
     annotation (
-      Window(
-  x=0.45,
-        y=0.01,
-        width=0.44,
-  height=0.65),
       Documentation(
       info="<html>
 </html>"),
@@ -902,22 +816,9 @@ In problematic cases use power sensors electrical and mechanical.</p>
             extent={{-100,-100},{100,100}},
             grid={2,2}), graphics));
   end PhasorBase;
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
+
 Documentation(info="<html>
 <p>Sensors output terminal signals (voltage, current, power) in a defined reference system chosen by the user.</p>
 <p>Meters allow choosing base-units for output variables.</p>

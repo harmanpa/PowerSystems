@@ -7,11 +7,6 @@ package Loads "Loads"
     R = V2_nom/p0;
   annotation (
     defaultComponentName="rLoad",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Resistive load AC or DC with impedance characteristic.<br>
@@ -41,11 +36,6 @@ Consumes the desired power at <b>nominal</b> voltage.</p>
     Z = (p0/(p0*p0))*V2_nom;
   annotation (
     defaultComponentName="zLoadAC",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Inductive load AC with impedance characteristic.<br>
@@ -80,11 +70,6 @@ Consumes the desired active and reactive power at <b>nominal</b> voltage.</p>
     Y = (p0/(p0*p0))*I2_nom;
   annotation (
     defaultComponentName="yLoadAC",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Capacitive load AC with admittance characteristic.<br>
@@ -120,11 +105,6 @@ Consumes the desired active and reactive power at <b>nominal</b> voltage.</p>
     L = t_RL*R;
   annotation (
     defaultComponentName="zLoadDC",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Resistive-inductive load DC with impedance characteristic.<br>
@@ -169,11 +149,6 @@ Consumes the desired power at <b>nominal</b> voltage.</p>
     L = t_RL*R;
   annotation (
     defaultComponentName="pLoadDC",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Resistive-inductive load DC with constant characteristic.<br>
@@ -217,11 +192,6 @@ Consumes the desired power independent of voltage.</p>
     der(R) = ((v2/p0)*tanh(imax)/tanh(imax*v2/V2_nom) - R)/tcst;
   annotation (
     defaultComponentName="pLoadDC",
-      Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
       Documentation(
         info="<html>
 <p>Resistive load DC with constant characteristic.<br>
@@ -267,11 +237,6 @@ Consumes the desired power independent of voltage.</p>
       v = term.v[1] - term.v[2];
       i = term.i[1];
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 </html>"),
@@ -294,7 +259,7 @@ Consumes the desired power independent of voltage.</p>
 
       parameter Boolean scType_par = true
         "= true if p0 defined by parameter p0_set otherwise by input signal p_set"
-        annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+        annotation(Evaluate=true, choices(checkBox=true));
       parameter SIpu.Power p0_set(min=0)=1 "power, (start val if signal inp)"    annotation(Dialog(enable=scType_par));
       Modelica.Blocks.Interfaces.RealInput p_set(min=0) if not scType_par
         "desired power"                                    annotation (Placement(
@@ -322,11 +287,6 @@ Consumes the desired power independent of voltage.</p>
       end if;
       R*i = v;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 </html>"),
@@ -344,10 +304,10 @@ Consumes the desired power independent of voltage.</p>
       extends LoadBase;
 
       parameter Boolean stIni_en=true "enable steady-state initial equation"
-        annotation(evaluate=true, choices(__Dymola_checkBox=true));
+        annotation(evaluate=true, choices(checkBox=true));
       parameter Boolean scType_par = true
         "= true if p0 defined by parameter p0_set otherwise by input signal p_set"
-        annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+        annotation(Evaluate=true, choices(checkBox=true));
 
       parameter SIpu.Power[2] p0_set(min=0)={1,1}/sqrt(2)
         "{active, reactive} power, (start val if signal inp)" annotation(Dialog(enable=scType_par));
@@ -372,11 +332,6 @@ Consumes the desired power independent of voltage.</p>
         p0 = p_set_internal*S_base;
       end if;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 </html>"),
@@ -416,11 +371,6 @@ Consumes the desired power independent of voltage.</p>
                      Z[1]*i = v;
                    end if;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(info=
                      "<html>
 </html>
@@ -465,11 +415,6 @@ Consumes the desired power independent of voltage.</p>
                      Y[1]*v = i;
                    end if;
                    annotation (
-                     Window(
-                       x=0.45,
-                       y=0.01,
-                       width=0.44,
-                       height=0.65),
                      Documentation(info=
                      "<html>
 </html>
@@ -500,10 +445,10 @@ Consumes the desired power independent of voltage.</p>
       extends LoadBase;
 
       parameter Boolean stIni_en=true "enable steady-state initial equation"
-        annotation(evaluate=true, choices(__Dymola_checkBox=true));
+        annotation(evaluate=true, choices(checkBox=true));
       parameter Boolean scType_par = true
         "= true if p0 defined by parameter p0_set otherwise by input signal p_set"
-        annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+        annotation(Evaluate=true, choices(checkBox=true));
       parameter SIpu.Power p0_set(min=0)=1 "power, (start val if signal inp)"    annotation(Dialog(enable=scType_par));
       Modelica.Blocks.Interfaces.RealInput p_set(min=0) if not scType_par
         "desired power"                                    annotation (Placement(
@@ -528,11 +473,6 @@ Consumes the desired power independent of voltage.</p>
         p0 = p_set_internal*S_base;
       end if;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 </html>"),
@@ -568,11 +508,6 @@ Consumes the desired power independent of voltage.</p>
     equation
       der(L*i) + R*i = v;
       annotation (
-        Window(
-          x=0.45,
-          y=0.01,
-          width=0.44,
-          height=0.65),
         Documentation(
       info="<html>
 </html>"),
@@ -589,22 +524,8 @@ Consumes the desired power independent of voltage.</p>
               fillColor={0,0,255},
               fillPattern=FillPattern.Solid)}));
     end IndLoadBaseDC;
-    annotation (            Window(
-        x=0.05,
-        y=0.44,
-        width=0.31,
-        height=0.23,
-        library=1,
-        autolayout=1));
   end Partials;
 annotation (preferedView="info",
-    Window(
-x=0.05,
-y=0.41,
-width=0.4,
-height=0.44,
-library=1,
-autolayout=1),
     Documentation(info="<html>
 <p>Different load models with an optional input:</p>
 <pre>  p_set:     active or {active, reactive} power</pre>

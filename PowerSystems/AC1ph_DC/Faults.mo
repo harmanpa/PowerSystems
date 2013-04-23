@@ -11,11 +11,6 @@ package Faults "Line-faults "
     {v,i} = if on then {epsR*s,s} else {s,epsG*s};
     annotation (
       defaultComponentName="short_ABC",
-    Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
     Documentation(
       info="<html>
 <p>Fault acts on 'term' and connected terminals.</p>
@@ -56,11 +51,6 @@ The transformation to inertial abc is only needed to determine the correct phase
     extends Partials.Fault_pp;
 
     annotation (defaultComponentName = "fault_ab",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Connect to 'fault'-terminal of faulted line.</p>
@@ -83,11 +73,6 @@ The transformation to inertial abc is only needed to determine the correct phase
     extends Partials.Fault_pg(final n_ph=1);
 
     annotation (defaultComponentName = "fault_A",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Connect to 'fault'-terminal of faulted line.</p>
@@ -110,11 +95,6 @@ The transformation to inertial abc is only needed to determine the correct phase
     extends Partials.Fault_pg(final n_ph=2);
 
     annotation (defaultComponentName = "fault_B",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Connect to 'fault'-terminal of faulted line.</p>
@@ -137,11 +117,6 @@ The transformation to inertial abc is only needed to determine the correct phase
     extends Partials.Fault_ppg(final n_ph=1);
 
     annotation (defaultComponentName = "fault_Ab",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Connect to 'fault'-terminal of faulted line.</p>
@@ -164,11 +139,6 @@ The transformation to inertial abc is only needed to determine the correct phase
     extends Partials.Fault_ppg(final n_ph=2);
 
     annotation (defaultComponentName = "fault_aB",
-      Window(
-  x=0.45,
-  y=0.01,
-  width=0.44,
-  height=0.65),
       Documentation(
               info="<html>
 <p>Connect to 'fault'-terminal of faulted line.</p>
@@ -219,13 +189,6 @@ The transformation to inertial abc is only needed to determine the correct phase
       end when;
       on = time > pre(t_zero) + phi_on/(2*pi*f);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 <p>The small parameter epsG is used to define voltage on the faulted line in particular when the line is disconnected from its sources. For disconnecting switches with zero 'open' conductivity, epsG can not be set to zero.</p>
@@ -269,13 +232,6 @@ The transformation to inertial abc is only needed to determine the correct phase
       fault_pp.i = i[1];
       sum(i) = epsG*sum(v);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 </html>
@@ -322,13 +278,6 @@ The transformation to inertial abc is only needed to determine the correct phase
        [2, 2],
           component=
             [40, 40]),
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 </html>
@@ -374,13 +323,6 @@ The transformation to inertial abc is only needed to determine the correct phase
       fault_pg.v=v[n_ph];
       fault_pg.i=sum(i);
       annotation (
-        Window(
-          x=
-    0.45, y=
-    0.01, width=
-        0.44,
-          height=
-         0.65),
         Documentation(
               info="<html>
 </html>
@@ -394,23 +336,9 @@ The transformation to inertial abc is only needed to determine the correct phase
               fillPattern=FillPattern.Solid)}));
     end Fault_ppg;
 
-    annotation (       Window(
-  x=0.05,
-  y=0.44,
-  width=0.31,
-  height=0.23,
-  library=1,
-  autolayout=1));
   end Partials;
 
   annotation (preferedView="info",
-Window(
-  x=0.05,
-  y=0.41,
-  width=0.4,
-  height=0.32,
-  library=1,
-  autolayout=1),
 Documentation(info="<html>
 <p> Contains faults (shorts) conductor to conductor and conductor to ground.</p>
 <p> Terminology:</p>

@@ -48,11 +48,6 @@ equation
     end when;
   end for;
   annotation (defaultComponentName = "pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Pulse width modulation for AC_DC 3-phase inverters, asynchronous mode.
@@ -142,11 +137,6 @@ equation
     end when;
   end for;
   annotation (defaultComponentName = "pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Pulse width modulation for AC_DC 3-phase inverters, synchronous mode (phase-angle instead of time).
@@ -267,11 +257,6 @@ equation
     end when;
   end for;*/
   annotation (defaultComponentName = "pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Pulse width modulation for AC_DC 3-phase inverters, tabulated synchronous mode (phase-angle instead of time).
@@ -358,11 +343,6 @@ equation
     gates[{2,4,6}] = {not state[k,1], not state[k,2], not state[k,3]};
   end when;
   annotation (defaultComponentName = "sv_pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Space vector modulation for AC_DC 3-phase inverters, asynchronous mode.<br>
@@ -449,11 +429,6 @@ equation
     gates[{2,4,6}] = {not state[k,1], not state[k,2], not state[k,3]};
   end when;
   annotation (defaultComponentName = "sv_pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Space vector modulation for AC_DC 3-phase inverters, synchronous mode (phase-angle instead of time).
@@ -518,11 +493,6 @@ equation
     connect(phaseCorr.y, phToAlphaBeta.theta) annotation (Line(points={{-60,19},
             {-60,10}}, color={0,0,127}));
   annotation (defaultComponentName = "sv_pwm",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>This version uses models from the library 'MotorControl', author Martin Kuhn, DLR Munich.</p>
@@ -578,11 +548,6 @@ equation
     gates[{pgt[k], ngt[k]}] = {u_abc[k] > a, u_abc[k] < -a};
   end for;
   annotation (defaultComponentName = "blockMod",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Block (rectangular) modulation for DC_AC 3-phase inverters.
@@ -654,11 +619,7 @@ end BlockM;
      end if;
    end when;
   annotation (defaultComponentName = "pwm",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Pulse width modulation for AC_DC 1-phase inverters, asynchronous mode.
@@ -751,11 +712,7 @@ equation
     end if;
   end when;
 annotation (defaultComponentName = "pwm",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Pulse width modulation for AC_DC 1-phase inverters, synchronous mode (phase-angle instead of time).
@@ -825,11 +782,7 @@ equation
     phiIgn = intpol(uPhasor[1], table.phiIgn);
   end when;
 annotation (defaultComponentName = "pwm",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Pulse width modulation for AC_DC 1-phase inverters, tabulated synchronous mode (phase-angle instead of time).
@@ -870,11 +823,6 @@ equation
   gates[{pgt[1], ngt[1]}] = {u > a, u < -a};
   gates[{pgt[2], ngt[2]}] = {u < -a, u > a};
   annotation (defaultComponentName = "blockMod",
-    Window(
-x=0.45,
-y=0.01,
-width=0.44,
-height=0.65),
     Documentation(
             info="<html>
 <p>Block (rectangular) modulation for DC_AC 1-phase inverters.
@@ -925,11 +873,7 @@ equation
 
   gate = t0 <= time and time < t1;
 annotation (defaultComponentName = "chopperMod",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Pulse width modulation for chopper, voltage controlled.
@@ -983,11 +927,7 @@ equation
     gate = pre(gate);
   end if;
 annotation (defaultComponentName = "chopperMod",
-  Window(
-      x=0.45,
-      y=0.01,
-      width=0.44,
-      height=0.65),
+
   Documentation(
           info="<html>
 <p>Pulse width modulation for chopper, current controlled.</p>
@@ -1034,13 +974,7 @@ package Partials "Partial models"
     final parameter Integer[m] pgt=1:2:(2*m-1) "positive gates" annotation(Evaluate=true);
     final parameter Integer[m] ngt=2:2:(2*m) "negative gates" annotation(Evaluate=true);
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1079,13 +1013,7 @@ package Partials "Partial models"
        false,false,false;
        true,true,true];
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1185,13 +1113,7 @@ protected
       Dphi[m2] = -dphi[m1];
     end if;
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1255,13 +1177,7 @@ protected
       Dphi[m2] = -dphi[m1];
     end if;
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1288,13 +1204,7 @@ protected
                                               annotation(Evaluate=true);
     final parameter SI.Time delp_t=del_t - dtmin/2 annotation(Evaluate=true);
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1326,13 +1236,7 @@ protected
     final parameter SI.Angle delp_phi=del_phi-dphimin/2
                                                       annotation(Evaluate=true);
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1379,13 +1283,7 @@ protected
     final parameter Integer[m] ngt=2:2:(2*m) "negative gates" annotation(Evaluate=true);
 
     annotation (
-      Window(
-        x=
-  0.45, y=
-  0.01, width=
-      0.44,
-        height=
-       0.65),
+
       Icon(coordinateSystem(
             preserveAspectRatio=false,
             extent={{-100,-100},{100,100}},
@@ -1412,14 +1310,6 @@ protected
             grid={2,2}), graphics));
 
   end BlockBase;
-
-  annotation (       Window(
-x=0.05,
-y=0.44,
-width=0.31,
-height=0.25,
-library=1,
-autolayout=1));
 end Partials;
 
 package SpaceVector "Space vector logic and control"
@@ -2938,13 +2828,6 @@ annotation (Diagram(graphics),
             "%name")}));
 end DutyRatioToCycle;
   annotation (preferedView="info",
-                     Window(
-x=0.05,
-y=0.44,
-width=0.31,
-height=0.25,
-library=1,
-autolayout=1),
       Documentation(info="<html>
 <p>This package contains models from the library 'MotorControl', author Martin Kuhn, DLR Munich.<br>
 Modifications needed for adaptation to Spot are mentioned in info-layer of the corresponding models.</p>
@@ -2952,13 +2835,6 @@ Modifications needed for adaptation to Spot are mentioned in info-layer of the c
 "));
 end SpaceVector;
 annotation (preferedView="info",
-    Window(
-x=0.05,
-y=0.41,
-width=0.4,
-height=0.32,
-library=1,
-autolayout=1),
     Documentation(info="<html>
 <p>Asynchronous and synchronous PWM control of inverter-gates, three- and one-phase.</p>
 </html>

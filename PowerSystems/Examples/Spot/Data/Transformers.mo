@@ -12,18 +12,14 @@ record TrafoIdeal1ph "Ideal trafo, 1-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={15000,1400}
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=5e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50/3 "nom frequency";
 
   annotation (defaultComponentName="trafo15k_1400",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -49,18 +45,14 @@ record TrafoStray1ph "Trafo with ideal magnetic coupling, 1-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={15000,1400}
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=5e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50/3 "nom frequency";
 
   annotation (defaultComponentName="trafo15k_1400",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -96,18 +88,14 @@ record TrafoMag1ph "Trafo with magnetic coupling, 1-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={15000,1400}
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=5e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50/3 "nom frequency";
 
   annotation (defaultComponentName="trafo15k_1400",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -143,18 +131,14 @@ record TrafoSat1ph "Trafo with saturation, 1-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={15000,1400}
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=5e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50/3 "nom frequency";
 
   annotation (defaultComponentName="trafo15k_1400",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -184,18 +168,14 @@ record TrafoIdeal "Ideal trafo, 3-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={20,400}*1e3
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1000e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50 "nom frequency";
 
   annotation (defaultComponentName="trafo20k_400k",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -224,18 +204,14 @@ record TrafoStray "Trafo with ideal magnetic coupling, 3-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={20,400}*1e3
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1000e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50 "nom frequency";
 
   annotation (defaultComponentName="trafo20k_400k",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -267,18 +243,14 @@ record TrafoMag "Trafo with magnetic coupling, 3-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={20,400}*1e3
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1000e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50 "nom frequency";
 
   annotation (defaultComponentName="trafo20k_400k",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>
@@ -312,18 +284,14 @@ record TrafoSat "Trafo with saturation, 3-phase, example"
 
   parameter Boolean puUnits=true
       "= true, if parameters in pu (= scaled with nom. values), else in SI units"
-                                                                                                          annotation(Evaluate=true, choices(__Dymola_checkBox=true));
+                                                                                                          annotation(Evaluate=true, choices(checkBox=true));
   parameter SI.Voltage[2] V_nom={20,400}*1e3
       "{prim,sec} nom Voltage (= base if pu)";
   parameter SI.ApparentPower S_nom=1000e6 "nom Power (= base if pu)";
   parameter SI.ApparentPower f_nom=50 "nom frequency";
 
   annotation (defaultComponentName="trafo20k_400k",
-    Window(
-x=0.45,
-      y=0.01,
-      width=0.44,
-height=0.65),
+
     Documentation(
     info="<html>
 </html>

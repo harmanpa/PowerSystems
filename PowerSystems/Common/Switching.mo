@@ -11,13 +11,6 @@ equation
   end when;
   {v,i} = if closed or arc then {epsR*s,s} else {s,epsG*s};
   annotation (defaultComponentName = "switch_",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 <p>Use only as component within complete Switch model.<br>
@@ -75,13 +68,6 @@ equation
   i_arc = if arc then s else 0;
   {v,i} = if closed then {epsR*s,s} else if arc then {v_arc,i_arc} else {s,epsG*s};
   annotation (defaultComponentName = "breaker_",
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 <p>Use only as component within complete Breaker model.<br>
@@ -128,13 +114,6 @@ equation
   end if;
       annotation (
         defaultComponentName="fault_",
-Window(
-  x=0.45,
-    y=0.01,
-    width=
-0.44,
-  height=
- 0.65),
 Documentation(
       info="<html>
 <p>Use only as component within complete Short model.</p>
@@ -207,13 +186,6 @@ equation
   end if;
   cleared = Q < Qclear;
 annotation (defaultComponentName = "fault_",
-  Window(
-    x=0.45,
-      y=0.01,
-      width=
-  0.44,
-    height=
-   0.65),
   Documentation(
         info="<html>
 <p>Use only as component within complete Fault model.<br>
@@ -258,13 +230,6 @@ partial model SwitchBase "Switch base kernel, no terminals"
   Real s;
 
   annotation (
-    Window(
-      x=
-0.45, y=
-0.01, width=
-    0.44,
-      height=
-     0.65),
     Documentation(
           info="<html>
 </html>
@@ -323,13 +288,6 @@ partial model FaultBase "Fault kernel base"
       annotation (
         structurallyIncomplete,
         defaultComponentName="fault_",
-Window(
-  x=0.45,
-    y=0.01,
-    width=
-0.44,
-  height=
- 0.65),
 Documentation(
       info="<html>
 </html>"),
@@ -355,13 +313,6 @@ end FaultBase;
           preserveAspectRatio=false,
           extent={{-100,-100},{100,100}},
           grid={2,2}), graphics),
-    Window(
-x=0.05,
-y=0.44,
-width=0.31,
-height=0.26,
-library=1,
-autolayout=1),
     Documentation(
             info="<html>
 </html>
