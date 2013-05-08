@@ -624,7 +624,7 @@ Turbine with gear and generator-rotor, elastically coupled, asynchronous generat
         annotation (Placement(transformation(extent={{-110,10},{-90,-10}},
               rotation=0)));
       replaceable PowerSystems.AC3ph.Machines.Synchron3rd_ee generator(final
-          w_el_ini =                                                              w_ini*generator.par.pp)
+          w_el_ini = w_ini*generator_par_pp)
         "synchron generator"
         annotation (                       choices(
         choice(redeclare PowerSystems.AC3ph.Machines.Synchron3rd_ee generator
@@ -650,6 +650,7 @@ Turbine with gear and generator-rotor, elastically coupled, asynchronous generat
               rotation=0)));
       parameter Modelica.SIunits.Time H=10 "inertia cst turb + gen";
     protected
+      parameter Integer generator_par_pp = generator.par.pp;
       final parameter SI.AngularVelocity w_nom=2*pi*generator.par.f_nom/generator.par.pp
         "nominal angular velocity";
       final parameter SI.AngularVelocity w_ini=speed_ini*w_nom
